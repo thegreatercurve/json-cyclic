@@ -1,0 +1,66 @@
+{
+  "name": "json-cyclic",
+  "version": "0.0.1",
+  "person": "John Flockton <hello@johnflockton.com>",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && parcel build ./src/index.js --out-file index.js",
+    "clean": "rm -rf ./.cache ./dist",
+    "dev": "parcel ./index.html --no-cache",
+    "format": "prettier --write \"./src/**/*.js\"",
+    "format:check": "prettier --list-different \"./src/**/*.js\"",
+    "lint": "eslint \"./src/**/*.js\"",
+    "test": "jest --no-cache --coverage"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "John Flockton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thegreatercurve/json-cyclic/issues"
+  },
+  "homepage": "https://github.com/thegreatercurve/json-cyclic#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegreatercurve/json-cyclic.git"
+  },
+  "keywords": [
+    "JSON",
+    "circular JSON",
+    "circular references",
+    "cyclic JSON",
+    "cyclic references"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "jest": "^22.4.4",
+    "parcel": "^1.9.2",
+    "prettier": "^1.13.5"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/!(index).js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
