@@ -1,9 +1,11 @@
 {
   "name": "json-cyclic",
-  "version": "0.0.1",
+  "description": "Small utility library to replace circular references in JavaScript with JSONPaths",
+  "version": "0.0.2",
   "person": "John Flockton <hello@johnflockton.com>",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "npm run clean && parcel build ./src/index.js --out-file index.js",
     "clean": "rm -rf ./.cache ./dist",
     "dev": "parcel ./index.html --no-cache",
@@ -12,10 +14,7 @@
     "lint": "eslint \"./src/**/*.js\"",
     "test": "jest --no-cache --coverage"
   },
-  "files": [
-    "lib",
-    "src"
-  ],
+  "files": ["dist"],
   "author": "John Flockton",
   "license": "MIT",
   "bugs": {
