@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build": "./node_modules/.bin/microbundle",
+    "dev": "./node_modules/.bin/microbundle watch",
     "format": "prettier --write \"./src/**/*.js\"",
     "format:check": "prettier --list-different \"./src/**/*.js\"",
     "lint": "eslint \"./src/**/*.js\"",
