@@ -5,7 +5,7 @@
   "person": "John Flockton <hello@johnflockton.com>",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "npm run clean && parcel build ./src/index.js --out-file index.js",
     "clean": "rm -rf ./.cache ./dist",
     "dev": "parcel ./index.html --no-cache",
