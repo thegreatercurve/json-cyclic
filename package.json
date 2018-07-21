@@ -6,15 +6,16 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "npm run clean && parcel build ./src/index.js --out-file index.js",
-    "clean": "rm -rf ./.cache ./dist",
-    "dev": "parcel ./index.html --no-cache",
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "format": "prettier --write \"./src/**/*.js\"",
     "format:check": "prettier --list-different \"./src/**/*.js\"",
     "lint": "eslint \"./src/**/*.js\"",
-    "test": "jest --no-cache --coverage"
+    "test": "jest --coverage"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "John Flockton",
   "license": "MIT",
   "bugs": {
@@ -40,7 +41,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^22.4.4",
-    "parcel": "^1.9.2",
+    "microbundle": "^0.6.0",
     "prettier": "^1.13.5"
   },
   "babel": {
