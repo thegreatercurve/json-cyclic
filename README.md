@@ -1,6 +1,6 @@
 ## JSON Cyclic 
 
-[![CircleCI](https://circleci.com/gh/thegreatercurve/json-cyclic.svg?style=svg)](https://circleci.com/gh/thegreatercurve/json-cyclic)
+[![CircleCI](https://circleci.com/gh/thegreatercurve/json-cyclic.svg?style=svg)](https://circleci.com/gh/thegreatercurve/json-cyclic) [![Greenkeeper badge](https://badges.greenkeeper.io/thegreatercurve/json-cyclic.svg)](https://greenkeeper.io/)
 
 A small JavaScript library to replace circular references in object literals with [JSONPath](http://goessner.net/articles/JsonPath/) references, so that the data can be stringified as JSON.
 
