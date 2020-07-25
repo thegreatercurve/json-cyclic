@@ -1,7 +1,7 @@
 default_image: &default_image
   working_directory: ~/repo
   docker:
-      - image: circleci/node:10.7.0
+      - image: circleci/node:12.15.0
 
 default_filters: &default_filters
   filters:
