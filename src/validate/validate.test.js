@@ -9,7 +9,7 @@ describe("validate", () => {
     NUMBER: 10,
     OBJECT: {},
     STRING: "foo",
-    NULL: null
+    NULL: null,
   };
 
   it("should only accept an `arg` of either type `array` or `object`", () => {
@@ -27,7 +27,7 @@ describe("validate", () => {
     const errorMessage =
       "TypeError: This method only accepts arrays and objects";
 
-    Object.keys(JSON_TYPES).map(type => {
+    Object.keys(JSON_TYPES).map((type) => {
       if (
         JSON_TYPES[type] !== JSON_TYPES.ARRAY &&
         JSON_TYPES[type] !== JSON_TYPES.OBJECT

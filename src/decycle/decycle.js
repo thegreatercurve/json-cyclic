@@ -2,9 +2,9 @@ import { isArray, isObject } from "../utils";
 import validate from "../validate";
 
 export const findRef = (ref, visitedRefs) =>
-  Object.keys(visitedRefs).find(key => visitedRefs[key] === ref);
+  Object.keys(visitedRefs).find((key) => visitedRefs[key] === ref);
 
-export const decycle = arg => {
+export const decycle = (arg) => {
   validate(arg);
 
   let visitedRefs = {};

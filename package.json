@@ -9,7 +9,7 @@
     "build": "npx microbundle",
     "dev": "npx microbundle watch",
     "format": "npx prettier --write \".//**/*.js\"",
-    "format:check": "npx prettier --list-different \"./src/**/*.js\"",
+    "format:check": "npx prettier --check \"./src/**/*.js\"",
     "lint": "npx eslint \"./src/**/*.js\"",
     "test": "npx jest --coverage"
   },

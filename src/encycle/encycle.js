@@ -1,17 +1,17 @@
 import { isArray, isObject } from "../utils";
 import validate from "../validate";
 
-export const isRef = value =>
+export const isRef = (value) =>
   isObject(value) &&
   value.hasOwnProperty("$ref") &&
   Object.keys(value).length === 1 &&
   !!value.$ref &&
   value.$ref.charAt(0) === "$";
 
-export const encycle = arg => {
+export const encycle = (arg) => {
   validate(arg);
 
-  const recurs = value => {
+  const recurs = (value) => {
     if (isArray(value) || isObject(value)) {
       if (isArray(value)) {
         return value.map((elem, i) => {

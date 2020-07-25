@@ -5,16 +5,16 @@ export const getDummyData = () => ({
   address: {
     streetAddress: "Example street",
     city: "Example",
-    postalCode: "XX11 1XX"
+    postalCode: "XX11 1XX",
   },
   phoneNumbers: [
     {
       type: "iPhone",
-      number: "0123-4567-8888"
+      number: "0123-4567-8888",
     },
     {
       type: "home",
-      number: "0123-4567-8910"
-    }
-  ]
+      number: "0123-4567-8910",
+    },
+  ],
 });

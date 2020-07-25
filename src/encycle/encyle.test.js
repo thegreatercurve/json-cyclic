@@ -81,8 +81,8 @@ describe("encycle", () => {
           age: dummyData.age,
           address: {
             ...dummyData.address,
-            postalCode: { $ref: "$.address" }
-          }
+            postalCode: { $ref: "$.address" },
+          },
         };
 
         expect(obj.address.postalCode === obj.address).toBe(false);

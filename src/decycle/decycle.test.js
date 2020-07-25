@@ -41,7 +41,7 @@ describe("decycle", () => {
       expect(decycle(arr)).toEqual([
         1,
         "a",
-        [1, "a", [3, { $ref: "$[2][2]" }]]
+        [1, "a", [3, { $ref: "$[2][2]" }]],
       ]);
     });
 
@@ -52,7 +52,7 @@ describe("decycle", () => {
 
       expect(decycle(obj)).toEqual({
         ...obj,
-        faz: { $ref: "$" }
+        faz: { $ref: "$" },
       });
     });
 
@@ -61,7 +61,7 @@ describe("decycle", () => {
         firstName: dummyData.firstName,
         lastName: dummyData.lastName,
         age: dummyData.age,
-        address: dummyData.address
+        address: dummyData.address,
       };
 
       obj.address.postalCode = obj.address;
@@ -70,8 +70,8 @@ describe("decycle", () => {
         ...obj,
         address: {
           ...obj.address,
-          postalCode: { $ref: "$.address" }
-        }
+          postalCode: { $ref: "$.address" },
+        },
       });
     });
 
@@ -84,9 +84,9 @@ describe("decycle", () => {
           ...dummyData.phoneNumbers.slice(0, -1),
           {
             ...dummyData.phoneNumbers[1],
-            number: { $ref: "$.phoneNumbers[1]" }
-          }
-        ]
+            number: { $ref: "$.phoneNumbers[1]" },
+          },
+        ],
       });
     });
 
@@ -100,15 +100,15 @@ describe("decycle", () => {
         address: {
           ...dummyData.address,
           streetAddress: { $ref: "$" },
-          country: { $ref: "$.address" }
+          country: { $ref: "$.address" },
         },
         phoneNumbers: [
           ...dummyData.phoneNumbers.slice(0, -1),
           {
             ...dummyData.phoneNumbers[1],
-            number: { $ref: "$.phoneNumbers[1]" }
-          }
-        ]
+            number: { $ref: "$.phoneNumbers[1]" },
+          },
+        ],
       });
     });
 
