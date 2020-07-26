@@ -12,7 +12,6 @@ default_filters: &default_filters
     branches:
       only: /.*/
 
-version: 2
 jobs:
   install:
     <<: *default_image
