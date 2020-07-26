@@ -1,7 +1,7 @@
 {
   "name": "json-cyclic",
   "description": "Small utility library to replace circular references in JavaScript with JSONPaths",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "person": "John Flockton <hello@johnflockton.com>",
   "main": "dist/index.js",
   "scripts": {
